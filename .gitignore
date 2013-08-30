@@ -1,0 +1,15 @@
+# archivos de sistema y temporales
+~*
+*.tmp
+Thumbs.db
+
+# archivos de eclipse
+/.settings
+.buildpath
+.project
+
+# repositorios
+.svn
+
+# directorios de trabajo
+/res
