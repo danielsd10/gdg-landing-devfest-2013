@@ -1,25 +1,15 @@
 /***************************************************************************************************
-====================================================================================================
-
-
-    Sunrise - Coming Soon Page
-
-    v1.0, 21 December 2012
-
-    by Alex Shnayder
-
-
-====================================================================================================
 
     Main javascript file
 
 ***************************************************************************************************/
 
 
-
 $(document).ready(function() {
 
 /*
+	Sunrise - Coming Soon Page
+	by Alex Shnayder
     Countdown
 =================================================================*/
     var date = new Date(config.countdown.year,
@@ -39,4 +29,19 @@ $(document).ready(function() {
         }
     });
 
+/*
+    Slider Sequence
+=================================================================*/
+    var options = {
+        autoPlay: true,
+        nextButton: true,
+        prevButton: true,
+        preloader: true,
+        navigationSkip: false
+    };
+    var sequence = $("#sequence").sequence(options).data("sequence");
+
+    sequence.afterLoaded = function(){
+        $(".sequence-prev, .sequence-next").fadeIn(500);
+    }
 });
